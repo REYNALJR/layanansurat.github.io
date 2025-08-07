@@ -1,0 +1,102 @@
+/* File: style.css */
+/* Gaya tambahan minimal untuk aplikasi Layanan Surat */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Tombol umum jika ingin dipakai ulang */
+.button-primary {
+  background-color: #16a34a; /* Tailwind: bg-green-600 */
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button-primary:hover {
+  background-color: #15803d; /* Tailwind: hover:bg-green-700 */
+  transform: scale(1.03);
+}
+
+.button-danger {
+  background-color: #dc2626; /* Tailwind: bg-red-600 */
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button-danger:hover {
+  background-color: #b91c1c; /* Tailwind: hover:bg-red-700 */
+  transform: scale(1.03);
+}
+
+/* Alert/Notifikasi */
+.alert-success {
+  background-color: #d1fae5; /* Tailwind: bg-green-100 */
+  color: #065f46;            /* Tailwind: text-green-800 */
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.alert-error {
+  background-color: #fee2e2; /* Tailwind: bg-red-100 */
+  color: #991b1b;            /* Tailwind: text-red-700 */
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Tambahan untuk dark mode di input/form */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #1f2937; /* Tailwind: bg-gray-800 */
+  color: #f9fafb;
+  border-color: #4b5563;     /* Tailwind: border-gray-600 */
+}
+
+/* Responsif tambahan */
+@media (max-width: 640px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+
+  .text-xl {
+    font-size: 1.125rem;
+  }
+
+  .p-6 {
+    padding: 1rem;
+  }
+
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Animasi lembut */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Transisi global untuk elemen */
+* {
+  transition: all 0.2s ease-in-out;
+}
